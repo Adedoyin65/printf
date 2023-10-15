@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			switch (*format++)
+			switch (*++format)
 			{
 			case 'c':
 			char_count += vfprintf(stdout, "%c", p);
