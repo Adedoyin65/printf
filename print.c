@@ -6,7 +6,6 @@
  * @format: is a character string.
  * Return: Returns a value.
  */
-
 int _printf(const char *format, ...)
 {
 	va_list p;
@@ -45,8 +44,7 @@ int _printf(const char *format, ...)
 			char_count += 2;
 			break;
 			}
-		}
-		format++;
+		} format++;
 	}
 	va_end(p);
 	return (char_count);
