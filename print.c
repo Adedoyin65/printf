@@ -25,19 +25,19 @@ int _printf(const char *format, ...)
 			switch (*++format)
 			{
 			case 'c':
-			char_count += vprintf("%c", p);
+			char_count += vfprintf(stdout, "%c", p);
 			break;
 			case 's':
-			char_count += vprintf("%s", p);
+			char_count += vfprintf(stdout, "%s", p);
 			break;
 			case '%':
-			char_count += vprintf("%%", p);
+			char_count += vfprintf(stdout, "%%", p);
 			break;
 			case 'd':
-			char_count += vprintf("%d", p);
+			char_count += vfprintf(stdout, "%d", p);
 			break;
 			case 'i':
-			char_count += vprintf("%i", p);
+			char_count += vfprintf(stdout, "%i", p);
 			break;
 			default:
 			putchar('%');
