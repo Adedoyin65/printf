@@ -25,19 +25,19 @@ int _printf(const char *format, ...)
 			switch (*++format)
 			{
 			case 'c':
-			char_count += vfprintf(stdout, "%c", va_list p);
+			char_count += vfprintf(stdout, "%c", p);
 			break;
 			case 's':
-			char_count += vfprintf(stdout, "%s", va_list p);
+			char_count += vfprintf(stdout, "%s", p);
 			break;
 			case '%':
-			char_count += vfprintf(stdout, "%%", va_list p);
+			char_count += vfprintf(stdout, "%%", p);
 			break;
 			case 'd':
-			char_count += vfprintf(stdout, "%d", va_list p);
+			char_count += vfprintf(stdout, "%d", p);
 			break;
 			case 'i':
-			char_count += vfprintf(stdout, "%i", va_list p);
+			char_count += vfprintf(stdout, "%i", p);
 			break;
 			case 'b':
 			char_count += vfprintf(stdout, "0b%d", p);
