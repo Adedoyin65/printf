@@ -39,9 +39,6 @@ int _printf(const char *format, ...)
 			case 'i':
 			char_count += vfprintf(stdout, "%i", p);
 			break;
-			case 'b':
-			char_count += vfprintf(stdout, "0b%d", p);
-			break;
 			default:
 			putchar('%');
 			putchar(*format);
