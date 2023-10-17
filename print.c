@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
 
@@ -24,19 +25,19 @@ int _printf(const char *format, ...)
 			switch (*++format)
 			{
 			case 'c':
-			char_count += vfprintf(stdout, "%c", p);
+			char_count += vfprintf(stdout, "%c", va_list p);
 			break;
 			case 's':
-			char_count += vfprintf(stdout, "%s", p);
+			char_count += vfprintf(stdout, "%s", va_list p);
 			break;
 			case '%':
-			char_count += vfprintf(stdout, "%%", p);
+			char_count += vfprintf(stdout, "%%", va_list p);
 			break;
 			case 'd':
-			char_count += vfprintf(stdout, "%d", p);
+			char_count += vfprintf(stdout, "%d", va_list p);
 			break;
 			case 'i':
-			char_count += vfprintf(stdout, "%i", p);
+			char_count += vfprintf(stdout, "%i", va_list p);
 			break;
 			case 'b':
 			char_count += vfprintf(stdout, "0b%d", p);
