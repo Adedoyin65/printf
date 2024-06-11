@@ -37,6 +37,9 @@ int handle_specifier(char specifier, va_list args)
 		case 'p':
 		count += _print_pointer(va_arg(args, void *));
 		break;
+		case 'b':
+		count += _print_binary(va_arg(args, unsigned int));
+		break;
 		case '%':
 		count += _putchar('%');
 		break;
