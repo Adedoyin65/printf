@@ -43,6 +43,9 @@ int handle_specifier(char specifier, va_list args)
 		case '%':
 		count += _putchar('%');
 		break;
+		case 'S':
+		count += print_custom_string(va_arg(args, char *));
+		break;
 		default:
 		count += _putchar('%');
 		count += _putchar(specifier);
